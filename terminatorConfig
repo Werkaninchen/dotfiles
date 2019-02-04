@@ -25,3 +25,14 @@
     foreground_color = "#bf9b30"
     palette = "#2b2b2b:#ff8700:#ffe28d:#7f7146:#7f7146:#7f7146:#7f7146:#ffe28d:#7f7146:#fb4934:#bf9b30:#fabd2f:#7f7146:#d3869b:#cca633:#ebdbb2"
     use_system_font = False
+  [[deepThought]]
+    
+    background_color = "#282828"
+    background_darkness = 0.9
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    cursor_shape = underline
+    font = DejaVu Sans Mono for Powerline 10
+    foreground_color = "#bf9b30"
+    palette = "#2b2b2b:#ff8700:#ffe28d:#7f7146:#7f7146:#7f7146:#7f7146:#ffe28d:#7f7146:#fb4934:#bf9b30:#fabd2f:#7f7146:#d3869b:#cca633:#ebdbb2"
+    use_system_font = False
