@@ -23,7 +23,7 @@
     cursor_shape = underline
     font = DejaVu Sans Mono for Powerline 9
     foreground_color = "#d4d4d4"
-    palette = "#b90b21:#d4d4d4:#b90b21:#b90b21:#dedede:#2b2b2b:#b90b21:#2b2b2b:#b90b21:#b90b21:#d4d4d4:#b90b21:#b90b21:#d3869b:#b90b21:#dedede"
+    palette = "#ef2929:#d4d4d4:#b90b21:#b90b21:#dedede:#2b2b2b:#b90b21:#2b2b2b:#b90b21:#b90b21:#d4d4d4:#b90b21:#b90b21:#d3869b:#b90b21:#dedede"
     use_system_font = False
   [[HAL-9000]]
     background_color = "#2b2b2b"

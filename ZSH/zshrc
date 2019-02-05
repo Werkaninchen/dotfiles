@@ -16,7 +16,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMT_ROOT=true
 BULLETTRAIN_PROMT_SEPERATE_LINE=true
-BULLETTRAIN_PROMT_ADD_NEWLINE=rue
+BULLETTRAIN_PROMT_ADD_NEWLINE=true
 
 
 # Uncomment the following line to use case-sensitive completion.
