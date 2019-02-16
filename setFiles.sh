@@ -24,4 +24,7 @@ cd $ZSH/themes
 if [! -d "zsh-syntax-highlighting.theme"]
 then
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git zsh-syntax-highlighting.theme
+else 
+	cd zsh-syntax-highlighting.theme
+	git pull
 fi

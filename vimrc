@@ -4,10 +4,10 @@
 set nocompatible
 behave mswin
 set selectmode=mouse
-set tabstop=4
+set tabstop=8
 
-" I want an intend of four characters
-set shiftwidth=4
+" I want an intend of eight characters
+set shiftwidth=8
 set shiftround
 set autoindent 
 
@@ -55,7 +55,7 @@ else
 endif 
 
 " allow backspacing over everything in insert mode
-set backspace=1
+set backspace=0
 set autoindent		" always set autoindenting on
 
 " Active file type recognition
@@ -77,7 +77,7 @@ if has("win32")
 	set bdir=d:\temp
 	set nobackup
 	set writebackup
-	
+
 	" In Vim, the unnamed register is the " register, and the Windows
 	" Clipboard is the * register. This means that if you yank something,
 	" you have to yank it to the * register if you want to paste it into
@@ -122,7 +122,7 @@ set spelllang=de_de,en
 
 map <F8> <ESC>gg"fYG"fpG<ESC>:s/\s/_/gie<CR><ESC>:s:ä:ae:eg<CR><ESC>:s:Ä:AE:ge<CR><ESC>:s:ö:oe:ge<CR><ESC>:s:Ö:OE:ge<CR><ESC>:s:ü:ue:ge<CR><ESC>:s:Ü:UE:ge<CR><ESC>:s:ß:sz:ge<CR><ESC>:s/@/-at-/ge<CR><ESC>:s:_-_:-:ge<CR><ESC>:s:-_:-:ge<CR><ESC>:s:_-:-:ge<CR><ESC>:s/\:_/-/ge<CR><ESC>:s:?::ge<CR><ESC>:s:\"::ge<CR><ESC>:s:\'::ge<CR><ESC>:s/\!//ge<CR><ESC>:s/(//ge<CR><ESC>:s/)//ge<CR><ESC>:s/\.//ge<CR><ESC>:s:,_:_:ge<CR><ESC>:s:_$::e<CR><ESC>A.txt<ESC>"+dd:browse confirm wa<CR>
 
-map <F9> <ESC>iTITEL<CR>meta-Author: <a rel="author" href="/static/about-me.html">Martin Leyrer</a><CR>Tags: <CR><CR><ESC>
+map <F9> <ESC>iTITEL<CR>meta-Author: <a rel="author" href="/static/about-me.html">Jeroen-Niclas Trzaska</a><CR>Tags: <CR><CR><ESC>
 
 " http://vim.wikia.com/wiki/HTML_entities
 " If you add this code to your vimrc, you can escape visually-selected HTML with ctrl-h, and unescape with ctrl-u. 
@@ -339,9 +339,9 @@ noremap <Right> <NOP>
 
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
+    \ set tabstop=8
+    \ set softtabstop=8
+    \ set shiftwidth=8
     \ set textwidth=79
     \ set expandtab
     \ set autoindent
