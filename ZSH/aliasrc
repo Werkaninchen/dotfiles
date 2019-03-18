@@ -1,0 +1,11 @@
+#!/bin/sh
+## zsh alias file ##
+alias ka="killall" \
+	pac="sudo pacman" \
+	tri="trizen" \
+	ls="exa --git --all --color=auto" \
+	e="vim" \
+	v="vim" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto"
+

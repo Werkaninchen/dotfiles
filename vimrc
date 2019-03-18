@@ -55,7 +55,7 @@ else
 endif 
 
 " allow backspacing over everything in insert mode
-set backspace=0
+set backspace=2
 set autoindent		" always set autoindenting on
 
 " Active file type recognition
