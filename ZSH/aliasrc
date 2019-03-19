@@ -6,6 +6,11 @@ alias ka="killall" \
 	ls="exa --git --all --color=auto" \
 	e="vim" \
 	v="vim" \
+	ccat="highlight --out-format=ansi" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto"
 
+shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
+se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
+sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
+vf() { fzf | xargs -r -I % $EDITOR % ;}
