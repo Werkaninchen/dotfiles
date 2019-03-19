@@ -311,10 +311,15 @@ set rtp+=~/.fzf
 " https://github.com/junegunn/vim-plug
 " :PlugInstall to install plugins.
 call plug#begin('~/.vim/plugged')
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'w0rp/ale'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'valloric/youcompleteme'
 " Initialize plugin system
 call plug#end()
 
