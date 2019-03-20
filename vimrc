@@ -316,7 +316,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'w0rp/ale'
-Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'valloric/youcompleteme'
@@ -345,12 +344,11 @@ noremap <Right> <NOP>
 
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 au BufNewFile,BufRead *.py
-    \ set tabstop=8 |
-    \ set softtabstop=8 |
-    \ set shiftwidth=8 |
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
     \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
-
 
