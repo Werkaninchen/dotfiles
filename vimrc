@@ -345,12 +345,12 @@ noremap <Right> <NOP>
 
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 au BufNewFile,BufRead *.py
-    \ set tabstop=8
-    \ set softtabstop=8
-    \ set shiftwidth=8
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
+    \ set tabstop=8 |
+    \ set softtabstop=8 |
+    \ set shiftwidth=8 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
     \ set fileformat=unix
 
 
