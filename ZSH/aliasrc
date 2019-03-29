@@ -1,6 +1,7 @@
 #!/bin/sh
 ## zsh alias file ##
 alias ka="killall" \
+	apt = "sudo apt"\
 	pac="sudo pacman" \
 	tri="trizen" \
 	ls="exa --git --all --color=auto" \
