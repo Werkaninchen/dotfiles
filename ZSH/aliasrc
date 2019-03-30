@@ -9,7 +9,8 @@ alias ka="killall" \
 	v="vim" \
 	ccat="highlight --out-format=ansi" \
 	grep="grep --color=auto" \
-	diff="diff --color=auto"
+	diff="diff --color=auto"\
+	vtop="vtop --theme seti"
 	
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}

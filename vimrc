@@ -2,7 +2,6 @@
 "autocmd! 
 
 set nocompatible
-behave mswin
 set selectmode=mouse
 set tabstop=8
 
@@ -71,36 +70,16 @@ set incsearch
 set ignorecase
 set smartcase 
 
-if has("win32")
-	set guifont=Bitstream_Vera_Sans_Mono:h12
-	set dir=d:\temp
-	set bdir=d:\temp
-	set nobackup
-	set writebackup
-
-	" In Vim, the unnamed register is the " register, and the Windows
-	" Clipboard is the * register. This means that if you yank something,
-	" you have to yank it to the * register if you want to paste it into
-	" a Windows app. If this is too much trouble, set the 'clipboard' 
-	" option to 'unnamed'. Then you always yank to *.
-	set clipboard=unnamed
-	" For Win32 version, have "K" lookup the keyword in a help file
-	let winhelpfile='windows.hlp'
-	map K :execute "!start winhlp32 -k <cword> " . winhelpfile <CR>
-else
-	set bdir=$HOME/tmp
-	set dir=$HOME/tmp
-	set backupdir=$HOME/tmp
-	set nobackup
-	" https://dejavu-fonts.github.io/
-	set guifont=DejaVu\ Sans\ Mono\ 12
-endif
+set bdir=$HOME/tmp
+set dir=$HOME/tmp
+set backupdir=$HOME/tmp
+set nobackup
+" https://dejavu-fonts.github.io/
+set guifont=DejaVu\ Sans\ Mono\ 12
 
 set diffopt=horizontal
 
 set spelllang=de_de,en
-
-
 
 " ======================================================================
 " For blogging
