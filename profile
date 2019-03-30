@@ -4,6 +4,6 @@
 
 export EDITOR=vim
 export TERMINAL=terminator
-export BROWSER=brave
+export BROWSER=chromium
 
 source $HOME/.zshrc
