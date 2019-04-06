@@ -311,6 +311,8 @@ set rtp+=~/.fzf
 " https://github.com/junegunn/vim-plug
 " :PlugInstall to install plugins.
 call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
