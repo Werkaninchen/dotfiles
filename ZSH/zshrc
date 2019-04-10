@@ -56,9 +56,10 @@ ENABLE_CORRECTION="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 ###PLUGINS###
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 plugins=(
 	colored-man-pages
-	comand-not-found
 	common-aliases
 	cp
 	man
@@ -84,8 +85,6 @@ alias pmake='time nice make -j $NUMCPUS --load-average=$NUMCPUS'
 # http://www.economyofeffort.com/2014/07/04/zsh/
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
-
-source ~/.oh-my-zsh/themes/zsh-syntax-highlighting.theme/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
