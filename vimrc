@@ -44,7 +44,7 @@ set so=999
 set colorcolumn=80
 
 if has("multi_byte")
-	set encoding=utf-8
+    set encoding=utf-8
     setglobal fileencoding=utf-8
     "set bomb
     set termencoding=utf-8
@@ -315,6 +315,9 @@ if has('gui_running')
 	map <C-S-V>     "+gP
 	map <S-Insert>  "+gP
 endif
+
+" java shorthands
+abbr sout System.out.println();<Left><Left>i
 
 " habit breaking
 " via https://github.com/wondratsch/linux_home/blob/master/.vimrc
