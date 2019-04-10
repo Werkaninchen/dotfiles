@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/sh
 
 #profile file, runs on login
 
