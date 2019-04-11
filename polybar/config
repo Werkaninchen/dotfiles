@@ -32,7 +32,7 @@ secondary = #e60053
 peach = #FFCD98
 lime = #CADC79
 salmon = #d97464
-darkgrey = #2e2e2e
+darkgrey = #2b2b2b
 lightgrey = #444444
 alert = #bd2c40
 
@@ -84,8 +84,8 @@ module-margin-right = 0
 ;			Fonts
 ;----------------------------------------------------------
 font-0 = PowerlineSymbols:size=18;4
-font-1 = Terminus:size=13;2
-font-2 = FontAwesome:size=10;2
+font-1 = Terminus:size=14;2
+font-2 = FontAwesome:size=11;2
 font-3 = Unifont:size=50;25
 font-4 = EmojiOne Color:size=12;2
 ;----------------------------------------------------------
@@ -368,17 +368,19 @@ label = %percentage_used%%
 type = internal/network
 
 interface = wlp1s0
-interval = 0.3
+interval = 0.5
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
+label-connected = "  %essid%  %local_ip%  %downspeed:09:9%  %upspeed:09:9%"
 label-connected-foreground = ${colors.xcolor1}
 label-connected-background = ${colors.xcolor7}
 label-disconnected = " "
 label-disconnected-foreground = ${colors.xcolor1}
 label-disconnected-background = ${colors.xcolor7}
+
+label-connected-maxlen = 45
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -402,9 +404,9 @@ interval = 1
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 
-date = "  %Y/%m/%d | "
+date = "%m/%d | "
 
-time = "  %I:%M:%S %p"
+time = "  %I:%M %p"
 date-alt = "%a | "
 ;;time = "%I:%M:%S %p"
 time-alt = " %z %Z"
