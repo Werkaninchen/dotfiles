@@ -373,14 +373,14 @@ interval = 0.5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = "  %essid%  %local_ip%  %downspeed:09:9%  %upspeed:09:9%"
+label-connected = "  %essid%  %local_ip%  %downspeed:4%  %upspeed:4%"
 label-connected-foreground = ${colors.xcolor1}
 label-connected-background = ${colors.xcolor7}
 label-disconnected = " "
 label-disconnected-foreground = ${colors.xcolor1}
 label-disconnected-background = ${colors.xcolor7}
 
-label-connected-maxlen = 45
+label-connected-maxlen = 60
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂

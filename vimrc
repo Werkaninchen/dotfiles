@@ -1,6 +1,12 @@
 " Delete potential autocommands, that are active
 "autocmd! 
 
+if has('nvim')
+    	":set termguicolors
+	:set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
+	au VimLeave * set guicursor=a:block-blinkon0
+	" Neovim specific commands
+endif
 set nocompatible
 set selectmode=mouse
 set tabstop=8
