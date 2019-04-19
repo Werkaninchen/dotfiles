@@ -1,12 +1,21 @@
 " Delete potential autocommands, that are active
 "autocmd! 
 
+"neovim specific settings"
 if has('nvim')
     	":set termguicolors
 	:set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
 	au VimLeave * set guicursor=a:block-blinkon0
-	" Neovim specific commands
 endif
+
+" Settings for gvim can also be placed in the vimrc file using a has('gui_running') check
+if has('gui_running')
+	" CTRL-Shift-V and SHIFT-Insert are Paste
+	map <C-S-V>     "+gP
+	map <S-Insert>  "+gP
+endif
+
+
 set nocompatible
 set selectmode=mouse
 set tabstop=8
@@ -59,7 +68,7 @@ else
   echoerr "Vim not compiled with multi-byte support!"
 endif 
 
-" allow backspacing over everything in insert mode
+" disallow backspacing over everything in insert mode
 set backspace=2
 set autoindent		" always set autoindenting on
 
@@ -107,28 +116,26 @@ set rtp+=~/.fzf
 " https://github.com/junegunn/vim-plug
 " :PlugInstall to install plugins.
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+if has('nvim')
+  Plug 'benekastah/neomake'
+endif
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'w0rp/ale'
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'valloric/youcompleteme'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 " Initialize plugin system
 call plug#end()
 
 let g:airline_powerline_fonts = 1
-
-" Settings for gvim can also be placed in the vimrc file using a has('gui_running') check
-if has('gui_running')
-	" CTRL-Shift-V and SHIFT-Insert are Paste
-	map <C-S-V>     "+gP
-	map <S-Insert>  "+gP
-endif
-
+let g:airline_theme='solarized'
 " java shorthands
 abbr sout System.out.println();<Left><Left>i
 
