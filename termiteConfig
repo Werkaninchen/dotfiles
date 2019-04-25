@@ -1,10 +1,14 @@
 # Solarized dark color scheme
 
+[options]
+font = DejaVu Sans Mono
+
 [colors]
 foreground = #839496
 foreground_bold = #eee8d5
-#foreground_dim = #888888
-background = #002b36
+#foreground = #888888
+background = #002b36  
+#background = 
 cursor = #93a1a1
 
 # if unset, will reverse foreground and background

@@ -9,12 +9,6 @@ if has('nvim')
 endif
 
 " Settings for gvim can also be placed in the vimrc file using a has('gui_running') check
-if has('gui_running')
-	" CTRL-Shift-V and SHIFT-Insert are Paste
-	map <C-S-V>     "+gP
-	map <S-Insert>  "+gP
-endif
-
 
 set nocompatible
 set selectmode=mouse
@@ -24,9 +18,6 @@ set tabstop=8
 set shiftwidth=8
 set shiftround
 set autoindent 
-
-" colour scheme
-set background=dark
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
@@ -94,7 +85,7 @@ set guifont=DejaVu\ Sans\ Mono\ 12
 
 set diffopt=horizontal
 
-set spelllang=de_de,en
+set spelllang=de_de,en_us
 
 "------------------------------------------------------------------------------
 " http://vim.wikia.com/wiki/Reverse_letters
@@ -119,6 +110,7 @@ call plug#begin('~/.vim/plugged')
 if has('nvim')
   Plug 'benekastah/neomake'
 endif
+Plug 'altercation/vim-colors-solarized'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf.vim'
@@ -131,6 +123,7 @@ Plug 'valloric/youcompleteme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug 'udalov/kotlin-vim'
 " Initialize plugin system
 call plug#end()
 
@@ -145,6 +138,10 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" colour scheme
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+colorscheme solarized
 
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 au BufNewFile,BufRead *.py

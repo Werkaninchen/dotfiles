@@ -21,11 +21,11 @@
 ;----------------------------------------------------------
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #2b2b2b
+background = #073642
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
+foreground = #839496
+foreground-alt = #839496
 primary = #ffb52a
 secondary = #e60053
 
@@ -36,18 +36,33 @@ darkgrey = #2b2b2b
 lightgrey = #444444
 alert = #bd2c40
 
-xcolor0 = #2b2b2b
-xcolor1 = #FF0000
-xcolor2 = #FF0000
-xcolor3 = #FF0000
-xcolor4 = #FF0000
-xcolor5 = #FF0000
-xcolor6 = #FF0000
-xcolor7 = #2b2b2b
-xcolor8 = #FF0000
-xcolor9 = #FF0000
-xcolor10 = #FF0000
-xcolor11 = #FF0000
+xcolor0 = #073642
+xcolor1 = #2aa198
+xcolor2 = #b58900
+xcolor3 = #268bd2
+xcolor4 = #6c71c4
+xcolor5 = #d33682
+xcolor6 = #dc322f
+xcolor7 = #cb4b16
+xcolor8 = #b58900
+xcolor9 = #859900
+xcolor10 = #657b83
+yellow = #b58900
+orange = #cb4b16
+red = #dc322f
+magenta = #d33682
+violet = #6c71c4
+blue = #268bd2
+cyan = #2aa198
+green = #5f8700
+base0 =  #839496
+base1 = #93a1a1
+base2 = #eee8d5
+base3 = #fdf6e3
+base00 = #657b83
+base01 = #586e75
+base02 = #073642
+base03 = #002b36
 xcolor12 = #FF0000
 xcolor13 = #FF0000
 xcolor14 = #FF0000
@@ -59,20 +74,20 @@ xcolor15 = #FF0000
 enable-ipc = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 19
 offset-x = 0%
 offset-y = 0%
 radius = 0
 fixed-center = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.base03}
+foreground = ${colors.base00}
 
 line-size = 3
-line-color = #f00
+line-color = ${colors.magenta}
 
 border-bottom-size = 1 
-border-bottom-color = #ffffff
+border-bottom-color = $xcolo11
 
 padding-left = 0
 padding-right = 0
@@ -83,18 +98,18 @@ module-margin-right = 0
 ;----------------------------------------------------------
 ;			Fonts
 ;----------------------------------------------------------
-font-0 = PowerlineSymbols:size=18;4
-font-1 = Terminus:size=14;2
-font-2 = FontAwesome:size=11;2
-font-3 = Unifont:size=50;25
-font-4 = EmojiOne Color:size=12;2
+font-0 = PowerlineSymbols:size=12;3
+font-1 = Terminus:size=12;2
+font-2 = FontAwesome:size=8;2
+font-3 = Unifont:size=25;25
+font-4 = EmojiOne Color:size=7;2
 ;----------------------------------------------------------
 ;			module layout
 ;----------------------------------------------------------
 
-modules-left = i3 RightArrow3 music RightArrow2 volume RightArrow1
+modules-left = i3 RightArrow3 volume RightArrow2
 modules-center =  arrow1 date RightArrow1 
-modules-right = arrow1 backlight arrow2 network vpn arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
+modules-right = arrow1 backlight arrow2 network vpn arrow5 cpu arrow4 memory arrow3 filesystem arrow6 temperature arrow7 battery
 
 ;----------------------------------------------------------
 ;	          	arrow modules
@@ -104,70 +119,67 @@ modules-right = arrow1 backlight arrow2 network vpn arrow3 cpu arrow2 memory arr
 [module/arrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.base00}
+content-background = ${colors.base03}
 
 [module/arrow2]
 type = custom/text
 content = " "
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.base03}
+content-background = ${colors.base00}
 
 [module/arrow3]
 type = custom/text
 content = " "
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor7}
+content-foreground = ${colors.blue}
+content-background = ${colors.base00}
 
-[module/RightStripe]
-typ = custom/text
-content = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
+[module/arrow4]
+type = custom/text
+content = " "
+content-foreground = ${colors.base00}
+content-background = ${colors.red}
+
+[module/arrow5]
+type = custom/text
+content = " "
+content-foreground = ${colors.red}
+content-background = ${colors.base03
+
+[module/arrow6]
+type = custom/text
+content = " "
+content-foreground = ${colors.yellow}
+content-background = ${colors.blue}
+
+[module/arrow7]
+type = custom/text
+content = " "
+content-foreground = ${colors.base03}
+content-background = ${colors.yellow}
 
 [module/RightArrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.base00}
+content-background = ${colors.base03}
 
 [module/RightArrow2]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.blue}
+content-background = ${colors.base03}
 
 [module/RightArrow3]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor7}
-
-[module/MiddleArrowLeft]
-type = custom/text
-content = "◥"
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
-;◥ ◤◢ ◣
-[module/MiddleArrowRight]
-type = custom/text
-content = "◤"
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
-
+content-foreground = ${colors.violet}
+content-background = ${colors.blue}
 
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
 wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -204,18 +216,18 @@ interval = 25
 fixed-values = true
 
 mount-0 = /
-mount-1 = /home
-mount-2 = /git
+;mount-1 = /home
+;mount-2 = /git
 
 format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.xcolor7}
-format-mounted-background = ${colors.xcolor1}
+format-mounted-foreground = ${colors.orange}
+format-mounted-background = ${colors.base01}
 
 ;  
 label-mounted = "  %percentage_used%%"
 ; %free%% %percentage_used%% %used%
-label-mounted-foreground = ${colors.xcolor7}
-label-mounted-background = ${colors.xcolor1}
+label-mounted-foreground = ${colors.base03}
+label-mounted-background = ${colors.blue}
 label-unmounted =   %mountpoint%
 label-unmounted-foreground = ${colors.xcolor7}
 label-unmounted-background = ${colors.xcolor1}
@@ -231,13 +243,13 @@ wrapping-scroll = false
 ;pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.green}
+label-mode-background = ${colors.yellow}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.xcolor1}
-label-focused-underline= ${colors.xcolor1}
+label-focused-background = ${colors.base03}
+label-focused-underline= ${colors.violet}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -291,8 +303,8 @@ ramp-2 = 🌓
 ramp-3 = 🌒
 ramp-4 = 🌑
 
-format-background = ${colors.xcolor1}
-format-foreground = ${colors.xcolor0}
+format-background = ${colors.base00}
+format-foreground = ${colors.base03}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -328,8 +340,8 @@ interval = 1.0
 format = <label>
 ;format = <ramp-coreload><label> 
 format-prefix = " "
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-foreground = ${colors.base03}
+format-background = ${colors.red}
 
 label = %percentage:2%%
 ;   
@@ -353,8 +365,8 @@ interval = 1
 
 format-prefix = "  "
 ;format-prefix = ram
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.base03}
+format-background = ${colors.base00}
 format-margin-top = -5
 
 label = %percentage_used%%
@@ -367,18 +379,18 @@ label = %percentage_used%%
 [module/network]
 type = internal/network
 
-interface = wlp1s0
+interface = wlo2
 interval = 0.5
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
 label-connected = "  %essid%  %local_ip%  %downspeed:4%  %upspeed:4%"
-label-connected-foreground = ${colors.xcolor1}
-label-connected-background = ${colors.xcolor7}
-label-disconnected = " "
-label-disconnected-foreground = ${colors.xcolor1}
-label-disconnected-background = ${colors.xcolor7}
+label-connected-foreground = ${colors.blue}
+label-connected-background = ${colors.base03}
+label-disconnected = "  disconnected"
+label-disconnected-foreground = ${colors.red}
+label-disconnected-background = ${colors.base03}
 
 label-connected-maxlen = 60
 
@@ -401,8 +413,8 @@ ramp-signal-7 = █
 type = internal/date
 interval = 1
 
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-foreground = ${colors.base03}
+format-background = ${colors.base00}
 
 date = "%m/%d | "
 
@@ -431,24 +443,24 @@ format-volume = <ramp-volume><label-volume>
 ;     
 
 label-volume = %percentage%
-label-volume-foreground = ${colors.xcolor7}
-label-volume-background = ${colors.xcolor1}
+label-volume-foreground = ${colors.base03}
+label-volume-background = ${colors.blue}
 label-muted = "  muted"
-label-muted-foreground = ${colors.xcolor7}
-label-muted-background = ${colors.xcolor1}
+label-muted-foreground = ${colors.base03}
+label-muted-background = ${colors.red}
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.xcolor7}
-ramp-volume-0-background = ${colors.xcolor1}
+ramp-volume-0-foreground = ${colors.base03}
+ramp-volume-0-background = ${colors.blue}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.xcolor7}
-ramp-volume-1-background = ${colors.xcolor1}
+ramp-volume-1-foreground = ${colors.base03}
+ramp-volume-1-background = ${colors.blue}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.xcolor7}
-ramp-volume-2-background = ${colors.xcolor1}
+ramp-volume-2-foreground = ${colors.base03}
+ramp-volume-2-background = ${colors.blue}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.xcolor7}
-ramp-volume-3-background = ${colors.xcolor1}
+ramp-volume-3-foreground = ${colors.base03}
+ramp-volume-3-background = ${colors.blue}
 
 bar-volume-width = 10
 bar-volume-background = #495858
@@ -472,7 +484,7 @@ bar-volume-empty = ─
 [module/battery]
 type = internal/battery
 
-battery = BAT1
+battery = BAT0
 adapter = ADP1
 full-at = 99
 
@@ -481,15 +493,15 @@ format-charging = <animation-charging> <label-charging>
 format-charging-foreground = ${colors.xcolor7}
 format-charging-background = ${colors.xcolor1}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.xcolor7}
-format-discharging-background = ${colors.xcolor1}
+format-discharging-foreground = ${colors.green}
+format-discharging-background = ${colors.base03}
 format-full = <label-full>
 format-full-foreground = ${colors.xcolor7}
 format-full-background = ${colors.xcolor1}
 
 label-charging = "%percentage%% "
 label-discharging = "%percentage%% "
-label-discharging-foreground = ${colors.xcolor7}
+label-discharging-foreground = ${colors.green}
 label-full = "  %percentage%% "
 ; 
 ramp-capacity-0 = " "
@@ -520,10 +532,10 @@ warn-temperature = 60
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 format-prefix = " "
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor7}
-format-warn-foreground = ${colors.xcolor4}
-format-warn-background = ${colors.xcolor7}
+format-foreground = ${colors.base03}
+format-background = ${colors.yellow}
+format-warn-foreground = ${colors.base03}
+format-warn-background = ${colors.red}
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -596,10 +608,10 @@ click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/
 [module/vpn]
 type = custom/script
 exec = echo + VPN
-exec-if = pgrep -i vpn
+exec-if = pgrep -i vpn || pgrep -i openconnect
 interval = 3.0
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.blue}
+format-background = ${colors.base03}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%

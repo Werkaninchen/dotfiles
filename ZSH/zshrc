@@ -73,6 +73,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+bindkey -s "^[OM" "^M"
+
 ####User configuration###
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -81,6 +83,7 @@ compdef gpg2=gpg
 # parallel make
 export NUMCPUS=`grep -c '^processor' /proc/cpuinfo`
 alias pmake='time nice make -j $NUMCPUS --load-average=$NUMCPUS'
+bindkey -s "^[OM" "^M"
 
 # http://www.economyofeffort.com/2014/07/04/zsh/
 export TERM=xterm-256color
