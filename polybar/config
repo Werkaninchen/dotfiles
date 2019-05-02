@@ -100,9 +100,11 @@ module-margin-right = 0
 ;----------------------------------------------------------
 font-0 = PowerlineSymbols:size=12;3
 font-1 = Terminus:size=12;2
-font-2 = FontAwesome:size=8;2
-font-3 = Unifont:size=25;25
-font-4 = EmojiOne Color:size=7;2
+
+font-2 = Font Awesome 5 Brands:style=Solid:size=8;2
+font-3 = Font Awesome 5 Free:style=Solid:size=8;2
+font-4 = Unifont:size=25;25
+font-5 = EmojiOne Color:size=7;2
 ;----------------------------------------------------------
 ;			module layout
 ;----------------------------------------------------------

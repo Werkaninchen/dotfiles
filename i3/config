@@ -19,6 +19,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
+# start mutt( mailclient)
+bindsym $mod+m exec i3-sensible-terminal -e neomutt
+
 # start rofi (dmenu replacement)
 bindsym $mod+d exec --no-startup-id "rofi -show combi"
 

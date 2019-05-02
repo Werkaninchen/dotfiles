@@ -132,6 +132,12 @@ let g:airline_theme='solarized'
 " java shorthands
 abbr sout System.out.println();<Left><Left>i
 
+" saner key bindings for split movement
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " habit breaking
 " via https://github.com/wondratsch/linux_home/blob/master/.vimrc
 noremap <Up> <NOP>
