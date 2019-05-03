@@ -2,9 +2,11 @@
 
 #profile file, runs on login
 
-export EDITOR=vim
+export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+export EDITOR=nvim
 export TERMINAL=termite
 export BROWSER=firefox
+export READER="zathura"
 
 source $HOME/.zshrc
 

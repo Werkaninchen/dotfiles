@@ -387,7 +387,7 @@ interval = 0.5
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = "  %essid%  %local_ip%  %downspeed:4%  %upspeed:4%"
+label-connected = "  %essid%  %local_ip% "
 label-connected-foreground = ${colors.blue}
 label-connected-background = ${colors.base03}
 label-disconnected = "  disconnected"

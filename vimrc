@@ -1,6 +1,8 @@
 " Delete potential autocommands, that are active
 "autocmd! 
 
+set background=light
+
 "neovim specific settings"
 if has('nvim')
     	":set termguicolors
@@ -146,7 +148,7 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " colour scheme
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+map <Leader>bg :let &background = ( &background == "light"? "dark" : "light" )<CR>
 colorscheme solarized
 
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
