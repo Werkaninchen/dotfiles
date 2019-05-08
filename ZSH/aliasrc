@@ -12,7 +12,7 @@ alias ka="killall" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto"\
 	vtop="vtop --theme seti"
-	
+	emacs="emacs -nw"	
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}

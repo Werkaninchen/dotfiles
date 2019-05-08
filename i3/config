@@ -27,7 +27,7 @@ bindsym $mod+d exec --no-startup-id "rofi -show combi"
 
 #custom key bindings
 bindsym $mod+e exec i3-sensible-terminal -e ranger
-bindsym $mod+Shift+w exec --no-startup-id $BROWSER
+bindsym $mod+w exec --no-startup-id $BROWSER
 bindsym $mod+i exec i3-sensible-terminal -e gotop
 bindsym $mod+b exec "bgchange.sh"
 #i3-GAPS specifics
