@@ -1,7 +1,7 @@
 # Solarized dark color scheme
 
 [options]
-font = DejaVu Sans Mono
+font = Source Code Pro
 
 [colors]
 foreground = #839496
