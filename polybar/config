@@ -20,10 +20,8 @@
 ;			Colors
 ;----------------------------------------------------------
 [colors]
-;background = ${xrdb:color0:#222}
 background = #073642
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #839496
 foreground-alt = #839496
 primary = #ffb52a
@@ -67,8 +65,6 @@ xcolor12 = #FF0000
 xcolor13 = #FF0000
 xcolor14 = #FF0000
 xcolor15 = #FF0000
-;background = ${xrdb:background}
-;foreground = ${xrdb:foreground}
 
 [bar/HAL]
 enable-ipc = true
@@ -109,7 +105,7 @@ font-5 = EmojiOne Color:size=7;2
 ;			module layout
 ;----------------------------------------------------------
 
-modules-left = i3 RightArrow3 volume RightArrow2
+modules-left = i3 RightArrow3 volume RightArrow2 xkeyboard RightArrow4
 modules-center =  arrow1 date RightArrow1 
 modules-right = arrow1 backlight arrow2 network vpn arrow5 cpu arrow4 memory arrow3 filesystem arrow6 temperature arrow7 battery
 
@@ -117,7 +113,6 @@ modules-right = arrow1 backlight arrow2 network vpn arrow5 cpu arrow4 memory arr
 ;	          	arrow modules
 ;----------------------------------------------------------
 ;
-
 [module/arrow1]
 type = custom/text
 content = ""
@@ -170,13 +165,19 @@ content-background = ${colors.base03}
 type = custom/text
 content = ""
 content-foreground = ${colors.blue}
-content-background = ${colors.base03}
+content-background = ${colors.violet}
 
 [module/RightArrow3]
 type = custom/text
 content = ""
 content-foreground = ${colors.violet}
 content-background = ${colors.blue}
+
+[module/RightArrow4]
+type = custom/text
+content = ""
+content-foreground = ${colors.violet}
+content-background = ${colors.base03}
 
 ;tray-background = #0063ff
 
@@ -198,10 +199,9 @@ label = %title:0:30:...%
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-
 ;   
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor0}
+format-foreground = ${colors.base03}
+format-background = ${colors.violet}
 
 label-layout =  %layout%
 label-indicator-padding = 1
@@ -308,29 +308,6 @@ ramp-4 = 🌑
 format-background = ${colors.base00}
 format-foreground = ${colors.base03}
 
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─ 
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
-
 ;----------------------------------------------------------
 ;			   C P U
 ;----------------------------------------------------------
@@ -341,7 +318,7 @@ interval = 1.0
 
 format = <label>
 ;format = <ramp-coreload><label> 
-format-prefix = " "
+format-prefix = "  "
 format-foreground = ${colors.base03}
 format-background = ${colors.red}
 
@@ -409,8 +386,6 @@ ramp-signal-7 = █
 ;----------------------------------------------------------
 ;		     D A T E  &  T I M E
 ;----------------------------------------------------------
-
-
 [module/date]
 type = internal/date
 interval = 1
@@ -425,8 +400,6 @@ date-alt = "%a | "
 ;;time = "%I:%M:%S %p"
 time-alt = " %z %Z"
 label = "  %date%%time%  "
-
-
 
 ;----------------------------------------------------------
 ;			V O L U M E
@@ -547,36 +520,6 @@ ramp-1 = 
 ramp-2 = 
 ramp-3 = 
 ramp-4 = 
-
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
