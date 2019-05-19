@@ -3,11 +3,6 @@ if  [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 > /dev/null ; then
 	exec startx
 fi
 
-if which tmux >/dev/null 2>&1; then
-	    #if not inside a tmux session, and if no session is started, start a new session
-	test -z "$TMUX" && (tmux attach || tmux new-session)
-fi
-
 powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
