@@ -7,7 +7,7 @@ if [ $(grep -c 'set background=light' $HOME/.vimrc) -ne 0 ]; then
 	sed -i 's/set background=light/set background=dark/g' ~/.vimrc
 	feh --bg-scale ~/Pictures/wallpaper-dark.jpg 
 	ln -s ~/.config/zathura/zathurarc-dark ~/.config/zathura/zathurarc
-	sed -i 's/light/dark/g' ~/.tmux.conf
+	sed -i "s/'light'/'dark'/g" ~/.tmux.conf
 	tmux source ~/.tmux.conf
 else	
 	sed -i 's/${colors.base03}/${colors.base3}/g ; s/${colors.base00}/${colors.base0}/g' ~/.config/polybar/config 
@@ -15,6 +15,6 @@ else
 	sed -i 's/set background=dark/set background=light/g' ~/.vimrc
 	feh --bg-scale ~/Pictures/wallpaper-light.jpg
 	ln -s ~/.config/zathura/zathurarc-light ~/.config/zathura/zathurarc
-	sed -i 's/dark/light/g' ~/.tmux.conf
+	sed -i "s/'dark'/'light'/g" ~/.tmux.conf
 	tmux source ~/.tmux.conf
 fi

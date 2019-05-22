@@ -62,7 +62,7 @@ plugins=(
 	tmux
 	git
 	zsh-syntax-highlighting
-
+	zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -77,7 +77,6 @@ compdef gpg2=gpg
 # parallel make
 export NUMCPUS=`grep -c '^processor' /proc/cpuinfo`
 alias pmake='time nice make -j $NUMCPUS --load-average=$NUMCPUS'
-bindkey -s "^[OM" "^M"
 
 # http://www.economyofeffort.com/2014/07/04/zsh/
 export TERM=xterm-256color
@@ -102,6 +101,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 source "$HOME/.aliasrc"
+
+autoload -U compinit && compinit
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then

@@ -1,4 +1,4 @@
-# i3 config file (v4.0.1)
+# i3 config file (v4)
 # Author = Werkaninchen
 # 
 # Please see https://i3wm.org/docs/userguide.html for a complete reference
@@ -14,21 +14,21 @@ font pango:DejaVu Sans Mono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $TERMINAL
 
 # kill focused window
 bindsym $mod+q kill
 
 # start mutt( mailclient)
-bindsym $mod+m exec i3-sensible-terminal -e neomutt
+bindsym $mod+m exec $TERMINAL -e neomutt
 
 # start rofi (dmenu replacement)
 bindsym $mod+d exec --no-startup-id "rofi -show combi"
 
 #custom key bindings
-bindsym $mod+e exec i3-sensible-terminal -e ranger
+bindsym $mod+e exec $TERMINAL -e ranger
 bindsym $mod+w exec --no-startup-id $BROWSER
-bindsym $mod+i exec i3-sensible-terminal -e gotop
+bindsym $mod+i exec $TERMINAL -e gotop
 bindsym $mod+b exec "bgchange.sh"
 #i3-GAPS specifics
 

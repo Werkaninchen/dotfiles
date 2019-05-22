@@ -4,7 +4,7 @@
 
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR=nvim
-export TERMINAL=termite
+export TERMINAL=kitty
 export BROWSER=firefox
 export READER="zathura"
 
