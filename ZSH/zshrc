@@ -1,7 +1,6 @@
 if  [ "$(tty)" = "/dev/tty1" ] && ! pgrep -x i3 > /dev/null ; then 
 	exec startx
 fi
-
 powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 

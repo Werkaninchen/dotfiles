@@ -27,24 +27,7 @@ foreground-alt = #839496
 primary = #ffb52a
 secondary = #e60053
 
-peach = #FFCD98
-lime = #CADC79
-salmon = #d97464
-darkgrey = #2b2b2b
-lightgrey = #444444
 alert = #bd2c40
-
-xcolor0 = #073642
-xcolor1 = #2aa198
-xcolor2 = #b58900
-xcolor3 = #268bd2
-xcolor4 = #6c71c4
-xcolor5 = #d33682
-xcolor6 = #dc322f
-xcolor7 = #cb4b16
-xcolor8 = #b58900
-xcolor9 = #859900
-xcolor10 = #657b83
 yellow = #b58900
 orange = #cb4b16
 red = #dc322f
@@ -61,10 +44,6 @@ base00 = #657b83
 base01 = #586e75
 base02 = #073642
 base03 = #002b36
-xcolor12 = #FF0000
-xcolor13 = #FF0000
-xcolor14 = #FF0000
-xcolor15 = #FF0000
 
 [bar/HAL]
 enable-ipc = true
@@ -83,7 +62,8 @@ line-size = 3
 line-color = ${colors.magenta}
 
 border-bottom-size = 1 
-border-bottom-color = $xcolo11
+border-bottom-color = ${colors.base00}
+
 
 padding-left = 0
 padding-right = 0
@@ -96,7 +76,6 @@ module-margin-right = 0
 ;----------------------------------------------------------
 font-0 = PowerlineSymbols:size=12;3
 font-1 = Terminus:size=12;2
-
 font-2 = Font Awesome 5 Brands:style=Solid:size=8;2
 font-3 = Font Awesome 5 Free:style=Solid:size=8;2
 font-4 = Unifont:size=25;25
@@ -231,8 +210,8 @@ label-mounted = "  %percentage_used%%"
 label-mounted-foreground = ${colors.base03}
 label-mounted-background = ${colors.blue}
 label-unmounted =   %mountpoint%
-label-unmounted-foreground = ${colors.xcolor7}
-label-unmounted-background = ${colors.xcolor1}
+label-unmounted-foreground = ${colors.base03}
+label-unmounted-background = ${colors.base00}
 
 
 [module/i3]
@@ -451,7 +430,6 @@ bar-volume-indicator = "|"
 bar-volume-fill = ─
 bar-volume-empty = ─
 
-
 ;----------------------------------------------------------
 ;			 B A T T E R Y
 ;----------------------------------------------------------
@@ -463,16 +441,15 @@ battery = BAT0
 adapter = ADP1
 full-at = 99
 
-
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.xcolor7}
-format-charging-background = ${colors.xcolor1}
+format-charging-foreground = ${colors.green}
+format-charging-background = ${colors.base03}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.green}
 format-discharging-background = ${colors.base03}
 format-full = <label-full>
-format-full-foreground = ${colors.xcolor7}
-format-full-background = ${colors.xcolor1}
+format-full-foreground = ${colors.green}
+format-full-background = ${colors.base03}
 
 label-charging = "%percentage%% "
 label-discharging = "%percentage%% "
@@ -480,9 +457,9 @@ label-discharging-foreground = ${colors.green}
 label-full = "  %percentage%% "
 ; 
 ramp-capacity-0 = " "
-ramp-capacity-0-foreground = ${colors.xcolor4}
+ramp-capacity-0-foreground = ${colors.red}
 ramp-capacity-1 = " "
-ramp-capacity-1-foreground = ${colors.xcolor4}
+ramp-capacity-1-foreground = ${colors.orange}
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
@@ -491,9 +468,6 @@ animation-charging-1 = " "
 animation-charging-2 = " "
 animation-charging-3 = " "
 animation-charging-4 = " "
-animation-charging-framerate = 750
-
-
 ;----------------------------------------------------------
 ;		    T E M P E R A T U R E
 ;----------------------------------------------------------
@@ -532,24 +506,10 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-
 ;----------------------------------------------------------
 ;		      S C R I P T    M O D U L E S
 ;    https://github.com/jaagr/polybar/wiki/Module:-script
 ;----------------------------------------------------------
-
-
-[module/music]
-type = custom/script
-exec = $HOME/.config/polybar/mediaplayer.py
-exec-if = pgrep -x spotify
-interval = 3
-label = "  %output:0:30:% "
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
-click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-
 [module/vpn]
 type = custom/script
 exec = echo + VPN
@@ -563,7 +523,6 @@ click-middle = echo middle %counter%
 click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
-
 
 ; vim:ft=dosini
 
