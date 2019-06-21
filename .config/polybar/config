@@ -337,7 +337,7 @@ label = %percentage_used%%
 [module/network]
 type = internal/network
 
-interface = wlo2
+interface = wlp1s0
 interval = 0.5
 
 format-connected = <label-connected>
@@ -437,7 +437,7 @@ bar-volume-empty = ─
 [module/battery]
 type = internal/battery
 
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 full-at = 99
 
