@@ -11,7 +11,8 @@ alias ka="killall" \
 	ccat="highlight --out-format=ansi" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto"\
-	vtop="vtop --theme seti"
+	vtop="vtop --theme seti"\
+	tmux="tmux -u" \
 	emacs="emacs -nw"	
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
