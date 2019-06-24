@@ -64,7 +64,6 @@ line-color = ${colors.magenta}
 border-bottom-size = 1 
 border-bottom-color = ${colors.base00}
 
-
 padding-left = 0
 padding-right = 0
 
@@ -186,7 +185,6 @@ label-layout =  %layout%
 label-indicator-padding = 1
 label-indicator-background = ${colors.salmon}
 
-
 ;----------------------------------------------------------
 ;		   	filesystem
 ;----------------------------------------------------------
@@ -197,7 +195,7 @@ interval = 25
 fixed-values = true
 
 mount-0 = /
-;mount-1 = /home
+mount-1 = /home
 ;mount-2 = /git
 
 format-mounted = <label-mounted>
@@ -360,7 +358,6 @@ ramp-signal-4 = ▅
 ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
-
 
 ;----------------------------------------------------------
 ;		     D A T E  &  T I M E
