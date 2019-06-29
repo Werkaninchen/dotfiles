@@ -33,7 +33,7 @@ bindsym $mod+b exec --no-startup-id "bgchange.sh"
 #i3-GAPS specifics
 
 for_window [class="^.*"] border pixel 0
-gaps inner 20
+gaps inner 5
 gaps outer 0
 smart_gaps on
 
