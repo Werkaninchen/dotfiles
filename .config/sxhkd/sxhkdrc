@@ -1,3 +1,20 @@
+# basic binds
+super + Return
+	$TERMINAL
+super + m
+	$TERMINAL -e neomutt
+super + d
+	rofi -show combi
+super + e
+	$TERMINAL -e ranger
+super + w
+	$BROWSER
+super + i
+	$TERMINAL -e gotop
+super + b
+	bgchange.sh
+super + F8
+	mailsync
 #VOLUME
 XF86AudioLowerVolume
 	pactl -- set-sink-volume 0 -1%
