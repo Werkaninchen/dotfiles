@@ -9,6 +9,7 @@ if [ $(grep -c 'set background=light' $HOME/.vimrc) -ne 0 ]; then
 	ln -s $HOME/.config/zathura/zathurarc-dark $HOME/.config/zathura/zathurarc
 	kitty @ --to unix:/tmp/kitty set-colors -a $HOME/.config/kitty/kitty-dark.conf
 	ln -s $HOME/.config/kitty/kitty-dark.conf $HOME/.config/kitty/kitty.conf
+	sed -i "s/solarized-light/solarized_alternate/g" $HOME/.config/rofi/config
 	sed -i "s/'light'/'dark'/g" $HOME/.tmux.conf
 	tmux source $HOME/.tmux.conf
 else	
@@ -18,6 +19,7 @@ else
 	ln -s $HOME/.config/zathura/zathurarc-light $HOME/.config/zathura/zathurarc
 	kitty @ --to unix:/tmp/kitty set-colors -a $HOME/.config/kitty/kitty-light.conf
 	ln -s $HOME/.config/kitty/kitty-light.conf $HOME/.config/kitty/kitty.conf
+	sed -i "s/solarized_alternate/solarized-light/g" $HOME/.config/rofi/config
 	sed -i "s/'dark'/'light'/g" $HOME/.tmux.conf
 	tmux source $HOME/.tmux.conf
 fi
