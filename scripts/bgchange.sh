@@ -5,6 +5,7 @@ rm $HOME/.config/kitty/kitty.conf
 if [ $(grep -c 'set background=light' $HOME/.vimrc) -ne 0 ]; then
 	sed -i 's/${colors.base3}/${colors.base03}/g ; s/${colors.base0}/${colors.base00}/g' $HOME/.config/polybar/config 
 	sed -i 's/set background=light/set background=dark/g' $HOME/.vimrc
+	sed -i 's/solarized-light/solarized-dark/g' $HOME/.spacemacs
 	feh --bg-scale ~/Pictures/wallpaper-dark.jpg 
 	ln -s $HOME/.config/zathura/zathurarc-dark $HOME/.config/zathura/zathurarc
 	kitty @ --to unix:/tmp/kitty set-colors -a $HOME/.config/kitty/kitty-dark.conf
@@ -15,6 +16,7 @@ if [ $(grep -c 'set background=light' $HOME/.vimrc) -ne 0 ]; then
 else	
 	sed -i 's/${colors.base03}/${colors.base3}/g ; s/${colors.base00}/${colors.base0}/g' ~/.config/polybar/config 
 	sed -i 's/set background=dark/set background=light/g' $HOME/.vimrc
+	sed -i 's/solarized-dark/solarized-light' $HOME/.spacemacs
 	feh --bg-scale $HOME/Pictures/wallpaper-light.jpg
 	ln -s $HOME/.config/zathura/zathurarc-light $HOME/.config/zathura/zathurarc
 	kitty @ --to unix:/tmp/kitty set-colors -a $HOME/.config/kitty/kitty-light.conf
