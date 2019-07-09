@@ -6,7 +6,6 @@ alias ka="killall" \
 	apt="sudo apt"\
 	pac="sudo pacman" \
 	tri="trizen" \
-	ls="exa --git --all --color=auto" \
 	e="vim" \
 	v="vim" \
 	ccat="highlight --out-format=ansi" \
@@ -14,7 +13,8 @@ alias ka="killall" \
 	diff="diff --color=auto"\
 	vtop="vtop --theme seti"\
 	tmux="tmux -u" \
-	emacs="emacs -nw"	
+	emacs="emacs -nw"\
+	ls=/bin/ls
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 se() { du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf | xargs  -r $EDITOR ;}
 sv() { vcopy "$(du -a ~/.scripts/* ~/.config/* | awk '{print $2}' | fzf)" ;}
