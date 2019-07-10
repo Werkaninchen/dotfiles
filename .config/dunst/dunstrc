@@ -8,9 +8,9 @@
     notification_height = 0
     separator_height = 2
     padding = 0
-    horizontal_padding = 8
-    frame_width = 3
-    frame_color = "#282828"
+    horizontal_padding = 4
+    frame_width = 2
+    frame_color = "#657b83"
 
     # Define a color for the separator.
     # possible values are:
@@ -24,7 +24,7 @@
     sort = yes
 
     idle_threshold = 120
-    font = Monospace 14
+    font = SourceCode Pro 14
     line_height = 0
     markup = full
 
@@ -40,7 +40,7 @@
     # Markup is allowed
     format = "<b>%s</b>\n%b"
 
-    alignment = left
+    alignment = center
     show_age_threshold = 60
     word_wrap = yes
     ellipsize = middle
@@ -63,6 +63,7 @@
     class = Dunst
     startup_notification = false
     force_xinerama = false
+
 [experimental]
     per_monitor_dpi = false
 
@@ -75,21 +76,21 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282828"
-    foreground = "#928374"
+    background = "#073642"
+    foreground = "#2aa198"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#458588"
-    foreground = "#ebdbb2"
+    background = "#002b36"
+    foreground = "#6c71c4"
     timeout = 5
 
 [urgency_critical]
-    background = "#cc2421"
-    foreground = "#ebdbb2"
-    frame_color = "#fabd2f"
+    background = "#002b36"
+    foreground = "#d33682"
+    frame_color = "#dc322f"
     timeout = 0
 
 # Every section that isn't one of the above is interpreted as a rules to
