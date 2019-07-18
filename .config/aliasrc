@@ -4,15 +4,15 @@ alias ka="killall" \
 	git="hub"\
 	vim="nvim"\
 	apt="sudo apt"\
-	pac="sudo pacman" \
-	tri="trizen" \
-	e="vim" \
-	v="vim" \
-	ccat="highlight --out-format=ansi" \
-	grep="grep --color=auto" \
+	pac="sudo pacman"\
+	tri="trizen"\
+	e="vim"\
+	v="vim"\
+	ccat="highlight --out-format=ansi"\
+	grep="grep --color=auto"\
 	diff="diff --color=auto"\
 	vtop="vtop --theme seti"\
-	tmux="tmux -u" \
+	tmux="tmux -u"\
 	emacs="emacs -nw"\
 	ls=/bin/ls
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
