@@ -18,7 +18,7 @@ bindsym $mod+q kill
 #i3-GAPS specifics
 
 for_window [class="^.*"] border pixel 0
-gaps inner 5
+gaps inner 18
 gaps outer 0
 smart_gaps on
 

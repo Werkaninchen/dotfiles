@@ -1,0 +1,74 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+
+# Bookmarks:
+
+# TUI:
+al
+q0
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/git/dotfiles/.config/vifm
+	colors
+1
+d/git/dotfiles/.config/vifm/colors
+	..
+0
+d/git/dotfiles/.config/vifm
+	..
+0
+d/git/dotfiles/.config
+	..
+0
+d/git/dotfiles
+	..
+0
+d/git
+	dotfiles
+2
+d/git/dotfiles
+	..
+0
+d/git
+	..
+0
+d/
+	home
+6
+d/home
+	jeroen
+1
+d/home/jeroen
+	contacts.vcf
+24
+
+# Right window history (oldest to newest):
+D/git/dotfiles/.config/vifm
+	..
+0
+
+# Command line history (oldest to newest):
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/jeroen/.local/share/vifm/Trash/000_2019-06-27-21-45-34.085-VBoxSVC-9963.log
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/jeroen/.local/share/vifm/Trash/000_S01E07_-_Human_Evolution_Revised_Timelines_and_Multiregionalism.mp3
+	/home/jeroen/S01E07_-_Human_Evolution_Revised_Timelines_and_Multiregionalism.mp3
+t/home/jeroen/.local/share/vifm/Trash/000_2019-06-27-21-45-34.085-VBoxSVC-9963.log
+	/home/jeroen/2019-06-27-21-45-34.085-VBoxSVC-9963.log

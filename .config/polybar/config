@@ -195,8 +195,6 @@ interval = 25
 fixed-values = true
 
 mount-0 = /
-mount-1 = /home
-;mount-2 = /git
 
 format-mounted = <label-mounted>
 format-mounted-foreground = ${colors.orange}
@@ -521,5 +519,9 @@ click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
 
+[module/kdeconnect]
+type = custom/script 
+exec = /home/jeroen/.config/polybar/polybar-kdeconnect.sh -d  
+tail = true
 ; vim:ft=dosini
 
