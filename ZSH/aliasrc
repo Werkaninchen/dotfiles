@@ -1,6 +1,7 @@
 #!/bin/sh
 ## zsh alias file ##
 alias ka="killall" \
+	git="hub"\
 	vim="nvim"\
 	apt="sudo apt"\
 	pac="sudo pacman" \
