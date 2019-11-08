@@ -1,4 +1,6 @@
 # basic binds
+super + shift + l
+	betterlockscreen --lock blur
 super + Return
 	$TERMINAL
 super + m
@@ -26,3 +28,4 @@ XF86MonBrightnessDown
 	xbacklight -dec 5
 XF86MonBrightnessUp
  	xbacklight -inc 5
+
