@@ -1,5 +1,5 @@
 # basic binds
-super + shift + l
+super + alt + l
 	betterlockscreen --lock blur
 super + Return
 	$TERMINAL
