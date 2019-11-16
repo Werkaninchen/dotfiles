@@ -83,7 +83,7 @@ font-5 = EmojiOne Color:size=7;2
 ;			module layout
 ;----------------------------------------------------------
 
-modules-left = i3 RightArrow3 volume RightArrow2 xkeyboard RightArrow4
+modules-left = i3 RightArrow3 volume RightArrow2 mpd RightArrow4
 modules-center =  arrow1 date RightArrow1 
 modules-right = arrow1 backlight arrow2 network vpn arrow5 cpu arrow4 memory arrow3 filesystem arrow6 temperature arrow7 battery
 
@@ -247,16 +247,25 @@ label-urgent-padding = 2
 ; Separator in between workspaces
 ; label-separator = |
 
-
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+format-online =<label-song> <icon-prev> <icon-stop> <toggle> <icon-next>
+format-offline =<label-offline>
+
+format-online-background = ${colors.violet}
+format-online-foreground = ${colors.base03}
+
+format-offline-background = ${colors.violet}
+format-offline-foreground = ${colors.red}
+
+icon-prev = <
+icon-stop = ◽
+icon-play = ▷
+icon-pause = ▯▯  
+icon-next = >
+
+label-offline = 🎜 mpd is offline
 
 label-song-maxlen = 25
 label-song-ellipsis = true
