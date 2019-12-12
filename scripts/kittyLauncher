@@ -1,9 +1,0 @@
-#!/bin/sh
-count=$(ps -u |grep -c "kitty")
-echo $count
-if [ $count -ge 2 ]; then
-	echo "foo"
-	xdotool search --classname "kitty" windowactivate --sync key --clearmodifiers ctrl+n
-else
-	$TERMINAL
-fi

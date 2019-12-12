@@ -97,7 +97,8 @@ export LANG=en_US.UTF-8
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 export LC_ALL=en_US.UTF-8
 
-source "$HOME/.aliasrc"
+[ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
 autoload -U compinit && compinit
 
