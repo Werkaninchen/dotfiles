@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $# -ne 1 ]; then
-  echo "Please provide a length (e.g. \`urandgen 40\`)!";
+  echo "Please provide a length (e.g. \`passgen 40\`)!";
   exit 1;
 fi
 

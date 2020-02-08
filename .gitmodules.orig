@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+[submodule "ZSH/plugins/zsh-syntax-highlighting"]
+	path = ZSH/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "ZSH/plugins/zsh-completions"]
+	path = ZSH/plugins/zsh-completions
+	url = git@github.com:zsh-users/zsh-completions.git
+=======
+>>>>>>> dithed vifm for lf added mutt config
+[submodule ".config/mutt/powerline"]
+	path = .config/mutt/powerline
+	url = git@github.com:sheoak/neomutt-powerline-nerdfonts.git

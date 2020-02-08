@@ -5,6 +5,8 @@ super + Return
 	$TERMINAL
 super + m
 	$TERMINAL -e neomutt
+super + p
+	passmenu
 super + d
 	rofi -show combi
 super + e

@@ -49,7 +49,7 @@ base03 = #002b36
 enable-ipc = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 26
+height = 16
 offset-x = 0%
 offset-y = 0%
 radius = 0
@@ -73,12 +73,12 @@ module-margin-right = 0
 ;----------------------------------------------------------
 ;			Fonts
 ;----------------------------------------------------------
-font-0 = PowerlineSymbols:size=17;5
-font-1 = Terminus:size=17;4
-font-2 = Font Awesome 5 Brands:style=Solid:size=13;3
-font-3 = Font Awesome 5 Free:style=Solid:size=13;3
+font-0 = PowerlineSymbols:size=12;4
+font-1 = Terminus:size=11;3
+font-2 = Font Awesome 5 Brands:style=Solid:size=10;3
+font-3 = Font Awesome 5 Free:style=Solid:size=10;2
 font-4 = Unifont:size=30;25
-font-5 = EmojiOne Color:size=12;2
+font-5 = EmojiOne Color:size=11;2
 ;----------------------------------------------------------
 ;			module layout
 ;----------------------------------------------------------
@@ -342,13 +342,13 @@ label = %percentage_used%%
 [module/network]
 type = internal/network
 
-interface = wlp1s0
-interval = 2.0
+interface = enp4s0
+interval = 0.5
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = "  %essid%  %local_ip% "
+label-connected = "  %local_ip% "
 label-connected-foreground = ${colors.blue}
 label-connected-background = ${colors.base03}
 label-disconnected = "  disconnected"
