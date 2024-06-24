@@ -6,7 +6,6 @@ set previewer ~/.config/lf/scope
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
-set color256
 set icons		# Enable icons. Requires nerd fonts and LF_ICONS variable.
 
 # cmds/functions
@@ -67,5 +66,5 @@ map <c-r> reload
 map <enter> shell
 map x $$f
 map X !$f
-map o &mimeopen $f
-map O $mimeopen --ask $f
+map o &open $f
+map O $open --ask $f

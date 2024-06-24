@@ -1,7 +1,7 @@
 " Delete potential autocommands, that are active
 "autocmd! 
 
-set background=light
+set background=dark
 
 "neovim specific settings"
 if has('nvim')
