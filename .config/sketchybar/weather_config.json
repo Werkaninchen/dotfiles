@@ -1,0 +1,12 @@
+{
+    "weathergov": {
+        "location": "BOU/63,58",
+        "url": "https://api.weather.gov/gridpoints/",
+        "format": "forecast?units=si"
+    },
+    "wttr": {
+        "url": "https://wttr.in/",
+        "location": "Denver+CO",
+        "format": "format=2&m"
+    }
+}
